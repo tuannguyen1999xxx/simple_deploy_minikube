@@ -7,10 +7,10 @@
 2. Install minikube
 * wget https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 * Copy the downloaded file and store it into the /usr/local/bin/minikube directory with:
-- sudo cp minikube-linux-amd64 /usr/local/bin/minikube
-- sudo chmod 755 /usr/local/bin/minikube
+    - sudo cp minikube-linux-amd64 /usr/local/bin/minikube
+    - sudo chmod 755 /usr/local/bin/minikube
 * Check:
-- minikube version
+    - minikube version
 
 3. Install kubectl
 * curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl

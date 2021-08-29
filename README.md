@@ -26,10 +26,17 @@
 * Read the intrusion link https://docs.docker.com/develop/develop-images/dockerfile_best-practices/ or follow the example Dockerfile
 * docker build -t image_name .
 
-# Create a deployment
+# Create a deployment, service, pod
 1. From yaml file:
 * Follow the example .yaml
 * kubectl apply -f file_name.yaml
+2. Check health of the pod:
+* kubectl get pod
+* kubectl describe pod_name
+* kubectl logs -f pod_name
+* Excute to the container
+    * kubectl exec -it pod_name -- bash
+     (Similar with docker)
 
 
 

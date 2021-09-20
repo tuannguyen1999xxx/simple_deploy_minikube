@@ -1,0 +1,40 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: deepstream3-service
+spec:
+  selector:
+    app: deepstream3
+  ports:
+  - protocol: "TCP"
+    port: 7000
+    targetPort: 8111
+  type: LoadBalancer
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deepstream3
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: deepstream3
+  template:
+    metadata:
+      labels:
+        app: deepstream3
+    spec:
+      containers:
+        - name: deepstream3
+          image: tuannguyen1999xxx/deepstream_test3:latest
+          ports:
+            - containerPort: 8111
+          command: [ "/bin/bash", "-c", "--" ]
+          args: [ "while true; do sleep 300; done;" ]
+#          resources:
+#            limits:
+#              nvidia.com/gpu: 1
+#      tolerations:
+#        - effect: NoSchedule
+#          operator: Exists

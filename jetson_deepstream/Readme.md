@@ -4,22 +4,22 @@ https://developer.nvidia.com/blog/deploying-ai-apps-with-egx-on-jetson-xavier-nx
 
 # Deploy deepstream-sample
 
-""1. Create master node on jetson""
+**1. Create master node on jetson**
 ```
 bash create_masternode.sh
 
 ```
 
-""2. Create deployment""
+**2. Create deployment**
 ```
 bash helm_ins.sh
 
 ```
 # Other:
-""1. File: deepstream3.yaml""
+**1. File: deepstream3.yaml**
 - Run code sample of deepstream on python on jetson
 
-""2. Deploy"
+**2. Deploy**
 ```
 kubectl apply -f deepstream3.yaml
 

@@ -8,7 +8,7 @@ spec:
   ports:
   - protocol: "TCP"
     port: 7000
-    targetPort: 8111
+    targetPort: 8112
   type: LoadBalancer
 ---
 apiVersion: apps/v1
@@ -27,11 +27,11 @@ spec:
     spec:
       containers:
         - name: deepstream3
-          image: tuannguyen1999xxx/deepstream_test3:latest
+          image: tuannguyen1999xxx/deepstream_amd:latest
           ports:
-            - containerPort: 8111
-          command: [ "/bin/bash", "-c", "--" ]
-          args: [ "while true; do sleep 300; done;" ]
+            - containerPort: 8112
+#          command: [ "/bin/bash", "-c", "--" ]
+#          args: [ "while true; do sleep 300; done;" ]
 #          resources:
 #            limits:
 #              nvidia.com/gpu: 1

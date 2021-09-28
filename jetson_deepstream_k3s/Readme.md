@@ -2,8 +2,8 @@
 
 - This version is used to deploy a sample deepstream on jetson nano with k3s of kubernete 
 - The performance:
-    - CPU: 70%
-    - RAM: 3.5G/4G
+    - CPU: 40-50%
+    - RAM: 3-3.5G/4G
 
 # Install k3s
 

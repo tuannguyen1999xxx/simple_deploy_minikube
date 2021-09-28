@@ -43,3 +43,10 @@ sudo k3s kubectl apply -f deepstream3.yaml
 
 - ![](images/pod.png)
 - ![](images/results.png)
+
+**3. Notes**
+- When create several replicas in k3s, the node only run one replica (pod).
+
+- If the main pod die, the node will use this replicas to replace.
+
+- ![](images/pod_rep.png)
